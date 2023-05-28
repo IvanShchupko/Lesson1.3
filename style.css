@@ -1,0 +1,128 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    outline: 0; 
+    list-style: none; 
+    box-sizing: border-box; 
+    text-decoration: none; 
+}
+body {
+    background: url(https://tvoyposter.ru/userdata/image/thumbs/p/16/03/1603736ffa2e843c219d7f93ba8bc087_p.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.sing {
+    width: 400px;
+    height: 500px;
+    background:  linear-gradient(to bottom right, #ec4aecd2 , #a931a9e7);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    animation: sing 2s linear;
+}
+.sing:hover {
+    transform: scale(1.2);
+}
+@keyframes sing {
+    0%{
+        transform: translateY(-300px) translateX(-300px);
+    }
+    100%{
+        transform: translateY(0px) translateX(0px);
+    }
+}
+.sing:nth-child(2) {
+    animation: sing2 2s linear;
+}
+@keyframes sing2 {
+    0%{
+        transform: translateY(-300px) translateX(300px);
+    }
+    100%{
+        transform: translateY(0px) translateX(0px);
+    }
+}
+.sing__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.sing__text {
+    font-size: 15px;
+    margin-top: 30px;
+    font-family: 'Crimson Text', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Noto Serif', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+.sing__audio {
+    margin-top: 30px;
+}
+.sing__button {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #7b0a7bd2;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Crimson Text', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Noto Serif', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+.sing__button::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 30px;
+    background-color: #fff;
+    animation: button 1s linear infinite;
+}
+@keyframes button {
+    0%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+.sing__button::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 30px;
+    background-color: #fff;
+    animation: button 1s linear infinite;
+}
+@keyframes button {
+    0%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+.sing__button:hover {
+    cursor: pointer;
+}
