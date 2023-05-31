@@ -14,6 +14,15 @@ body {
     justify-content: space-around;
     margin-top: 100px;
     overflow: hidden;
+    animation: body 2s linear;
+}
+@keyframes body {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .sing {
     width: 400px;
@@ -26,9 +35,6 @@ body {
     align-items: center;
     transition: 0.5s;
     animation: sing 2s linear;
-}
-.sing:hover {
-    transform: scale(1.2);
 }
 @keyframes sing {
     0%{
@@ -53,20 +59,37 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    animation: img 0.2s linear infinite alternate;
+}
+@keyframes img {
+    0%{
+        transform: rotate(2deg) scale(1.02);
+    }
+    100%{
+        transform: rotate(-2deg) scale(0.98);
+    }
 }
 .sing__text {
     font-size: 15px;
     margin-top: 30px;
     font-family: 'Crimson Text', serif;
-font-family: 'Dancing Script', cursive;
-font-family: 'Noto Serif', serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Shadows Into Light', cursive;
-font-family: 'Signika Negative', sans-serif;
-font-family: 'Ubuntu', sans-serif;
+    animation: text 0.2s linear infinite alternate;
+}
+@keyframes text {
+    0%{
+        transform: rotate(-2deg) scale(0.98);
+    }
+    100%{
+        transform: rotate(2deg) scale(1.02);
+    }
 }
 .sing__audio {
     margin-top: 30px;
+    transition: 0.4s;
+}
+.sing__audio:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 .sing__button {
     margin-top: 30px;
@@ -87,6 +110,7 @@ font-family: 'Shadows Into Light', cursive;
 font-family: 'Signika Negative', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 }
+
 .sing__button::after{
     position: absolute;
     content: '';
@@ -124,5 +148,5 @@ font-family: 'Ubuntu', sans-serif;
     }
 }
 .sing__button:hover {
-    cursor: pointer;
+    cursor: pointer;;
 }
